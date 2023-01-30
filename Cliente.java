@@ -5,11 +5,12 @@ public class Cliente implements Autenticable
     private String telefono;
     private AutenticacionUtil util;    
 
-    public Cliente (String nombre,String documento,String telefono)
+    public Cliente (String nombre,String documento,String telefono, AutenticacionUtil util)
     {
 	this.nombre=nombre;
 	this.documento=documento;
 	this.telefono=telefono;
+	this.util = util;
     }
 
     public String getNombre()
