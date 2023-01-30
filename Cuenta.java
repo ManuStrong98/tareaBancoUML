@@ -1,52 +1,76 @@
-import java.util.*;
-
-public class Cuenta {
+public class Cuenta 
+{
     protected double saldo;
-    protected int agencia=1;
-    protected int numero;
-    protected Cliente titular= new Cliente() ;
-    protected int total;
-    public Cuenta(int Agencia,int numero){
-        this.agencia=agencia;
-        this.numero=numero;
+    private int agencia = 1;
+    private int numero;
+    private Cliente titular= new Cliente("erika", "word", "343487");
+    private int total;
+
+    public Cuenta(int agencia,int numero, double saldo, int total)
+    {
+	this.agencia =  agencia;
+	this.numero=numero;
+	this.saldo = saldo;
+	this.total = total;
     }
-    
-    public void deposita(double valor){
-        
+
+    public Cuenta(int agencia, int numero)
+    {
+	this.agencia = agencia;
+	this. agencia = agencia;
+    }
+
+    public void deposita(double valor)
+    {
+
     } 
-    
-    public void saca(double valor){
-    
+
+    public boolean saca(double valor)
+    {
+	return valor == 1.0;
     }
-    
-    public void transfiere(double valor,Cuenta destino){
-    
+
+    public boolean transfiere(double valor,Cuenta destino)
+    {
+	return true;	
     }
-    
-    public double getSaldo(){
-        return saldo;
+
+    public double getSaldo()
+    {
+	return saldo;
     }
-    public int getAgencia (){
-        return agencia;
+
+    public int getAgencia ()
+    {
+	return agencia;
     }
-    public int getNumero(){
-        return numero;
+
+    public int getNumero()
+    {
+	return numero;
     }
-    public Cliente getTitular(){
-        return titular;
+
+    public Cliente getTitular()
+    {
+	return titular;
     }
-    public int getTotal(){
-        return total;
+
+    public int getTotal()
+    {
+	return total;
     }
-    
-    public void setAgencia(int agencia){
-        this.agencia=agencia;
+
+    public void setAgencia(int agencia)
+    {
+	this.agencia=agencia;
     }
-    public void setNumero(int numero){
-        this.numero=numero;
+    public void setNumero(int numero)
+    {
+	this.numero = numero;
     }
-    public void setTitular(Cliente titular){
-        this.titular=titular;
+    public void setTitular(Cliente titular)
+    {
+	this.titular=titular;
     }
-    
+
 }

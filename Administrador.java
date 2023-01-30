@@ -1,16 +1,27 @@
 public class Administrador extends Funcionario implements Autenticable
 {
-    protected AutenticacionUtil util;
-    public Administrador(){
+    private AutenticacionUtil util;
+    
+    public Administrador(String nombre, String documento, double salario,int tipo)
+    {
+	super(nombre, documento, salario, tipo);
     }
-    public double getBonificacion(){
+
+    @Override
+    public double getBonificacion()
+    {
         return 0.0;
     }
-    public void setClave(String clave){
-        this.util.clave=clave;
+
+    @Override
+    public boolean setClave(String clave)
+    {
+	return clave == "whatever";
     }
-    public boolean iniciarSesion(String clave){
-        if(this.util.clave.equals(clave))
+
+    public boolean iniciarSesion(String clave)
+    {
+        if(clave.equals(clave))
         {
             return true;
         }

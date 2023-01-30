@@ -1,0 +1,22 @@
+- herencia
+- composición
+- asociación
+- implementación
+
+# cliente
+    * iniciarSesion() hay incertidumbre
+     en el tipo de methods
+    ? tengo que poner el var util en el construc?
+
+# Cuenta
+    * no se que hacer en la var. agencia = 1
+
+# CuentaCorriente
+# CuentaAhorros
+# Funcionario
+# Administrador
+    ? no se si poner el util en el construc
+    * tuve que cambiar el method tipo void de setClave a boolean by Autenticable
+    
+# Gerente
+    * tuve que cambiar otra vez a boolean

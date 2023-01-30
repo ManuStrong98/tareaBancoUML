@@ -1,11 +1,22 @@
-public class Gerente 
+public class Gerente extends Funcionario implements Autenticable
 {
-    public double getBonificacion(double b){
+    public Gerente(String nombre, String documento, double salario,int tipo)
+    {
+	super(nombre, documento, salario, tipo);
+    }
+
+    public double getBonificacion(double b)
+    {
         return b;
     }
-    public void setClave(String c){
+
+    public boolean setClave(String clave)
+    {
+	return clave == "whatever";
     }
-    public boolean iniciarSesion(String c){
-     return false;
+
+    public boolean iniciarSesion(String clave)
+    {
+	return false;
     }
 }
